@@ -1,2 +1,29 @@
-<h1>Customers#show</h1>
-<p>Find me in app/views/customers/show.html.erb</p>
+<div class="customers-show-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 customers-show-container">
+        <h2 class="text-center">顧客情報</h2>
+        <p>顧客名：<%= @customer.name %></p>
+        <p>メールアドレス：<%= @customer.email %></p>
+        <ul>
+          <% if !current_user.nil? %>
+            <li><%= link_to "顧客一覧", customers_path, class: "" %></li>
+          <% end %>
+          <% if !current_customer.nil? %>
+            <li><%= link_to "顧客情報編集", edit_customer_path, class: "" %></li>
+          <% end %>
+          <% if !current_user.nil? && current_user.admin == true %>
+            <li><%= link_to "顧客削除", customer_path, method: :delete, class: "",
+                                    data: {confirm: "本当に削除しますか？"} %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% if @products.any? %>
+        <div class="col-md-offset-4 col-md-4 customers-show-container">
+          <h2 class="text-center">発注一覧</h2>
+          <%= render @products %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

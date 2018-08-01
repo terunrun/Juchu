@@ -1,0 +1,21 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      customer: 顧客
+      product: 商品
+    attributes:
+      user:
+        name: ユーザー名
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: 確認パスワード
+      customer:
+        name: 顧客名
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: 確認パスワード
+      product:
+        name: 商品名
+        number: 発注数
+        description: 説明

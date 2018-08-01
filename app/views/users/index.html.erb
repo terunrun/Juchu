@@ -1,0 +1,13 @@
+<div class="users-index-wrapper">
+  <div class="container">
+    <div class="row">
+      <h2 class="text-center">ユーザー一覧</h2>
+      <% @users.each do |user| %>
+        <div class="col-md-4 col-md-offset-4 users-index-container">
+          <p>ユーザー名：<%= link_to "#{user.name}", user_path(user.id), class: "" %></p>
+          <p>メールアドレス：<%= user.email %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

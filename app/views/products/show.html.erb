@@ -1,2 +1,29 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<div class="products-show-wrapper"
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 products-show-container">
+        <h2 class="text-center">発注詳細</h2>
+        <p>商品名：<%= @product.name %></p>
+        <p>発注数：<%= @product.number %></p>
+        <p>説明　：<%= @product.description %></p>
+        <p>発注日：<%= @product.created_at %></p>
+        <% if !current_user.nil? %>
+          <p>発注者：<%= link_to "#{Customer.find(@product.customer_id).name}",
+                    customer_path(@product.customer_id) %></p>
+        <% end %>
+        <ul>
+          <% if current_customer.nil? %>
+            <li><%= link_to "受注一覧", products_path, class: "" %></li>
+          <% end %>
+          <% if !current_customer.nil? %>
+            <li><%= link_to "発注内容編集", edit_product_path, class: "" %></li>
+          <% end %>
+          <% if !current_customer.nil? %>
+            <li><%= link_to "発注削除", product_path, method: :delete, class: "",
+                                      data: {confirm: "本当に削除しますか？"} %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

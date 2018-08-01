@@ -16,8 +16,17 @@ Rails.application.routes.draw do
   resources :customers
   resources :products
 
+  # session関連ルーティング
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+  get '/login_customer', to: 'sessions#new_customer'
+  post '/login_customer', to: 'sessions#create_customer'
+  delete '/logout_customer', to: 'sessions#destroy_customer'
+
   get 'pages/index'
   get 'pages/help'
   get 'pages/contact'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  root "pages#index"
 end

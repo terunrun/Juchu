@@ -5,11 +5,46 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <!-- css/javascriptを読み込み -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- IE9以下の場合に読み込むscriptを指定する条件付きコメント -->
+    <!--[if it IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![end if]-->
   </head>
 
   <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to root_path do %>
+          <span><%= image_tag "icons/logo.png", class:"nav-logo" %></span>
+        <% end %>
+          <ul class="nav navbar-nav navbar-right">
+            <% if logged_in? %>
+              <li><%= link_to "顧客一覧", customers_path, class:"" %></li>
+              <li><%= link_to "発注一覧", products_path, class:"" %></li>
+              <li><%= link_to "ユーザー一覧", users_path, class:"" %></li>
+              <li><%= link_to "ユーザー情報", user_path(current_user.id), class:"" %></li>
+              <li><%= link_to "ログアウト", logout_path, method: :delete, class:"" %></li>
+            <% elsif logged_in_customer? %>
+              <li><%= link_to "発注登録", new_product_path, class:"" %></li>
+              <li><%= link_to "顧客情報", customer_path(current_customer.id), class:"" %></li>
+              <li><%= link_to "ログアウト", logout_customer_path, method: :delete, class:"" %></li>
+            <% else %>
+              <li></li>
+            <% end %>
+          </ul>
+      </div>
+    </header>
+
+    <!-- flashメッセージを表示　暫定　☆ -->
+    <% flash.each do |key, value| %>
+      <div class="flash text-center"><%= value %></div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

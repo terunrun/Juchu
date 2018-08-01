@@ -1,2 +1,27 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<div class="static-pages-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 static-pages-container">
+        <h2 class="text-center">○○社受注管理システム</h2>
+        <% if logged_in? || logged_in_customer? %>
+          <p class="text-center">画面右上のメニューから選択してください</p>
+        <% else %>
+          <div class="select-area">
+            <p class="text-center">発注者の方はこちら</p>
+            <ul>
+              <li><%= link_to "発注者登録", new_customer_path, class: "btn btn-block" %></li>
+              <li><%= link_to "発注者ログイン", login_customer_path, class: "btn btn-block" %></li>
+            </ul>
+          </div>
+          <div class="select-area">
+            <p class="text-center">受注者の方はこちら</p>
+            <ul>
+              <li><%= link_to "受注者登録", new_user_path, class: "btn btn-block" %></li>
+              <li><%= link_to "受注者ログイン", login_path, class: "btn btn-block" %></li>
+            </ul>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

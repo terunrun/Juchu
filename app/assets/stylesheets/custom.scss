@@ -1,0 +1,176 @@
+/* 共通 */
+.nav-logo {
+  height: 40px;
+}
+
+.flash {
+  margin-top: 60px;
+}
+
+/* 静的ページ用 */
+.static-pages-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.static-pages-container {
+  margin-top: 100px;
+}
+
+.select-area {
+  margin-bottom: 50px;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    float: left;
+  }
+
+}
+
+/* ユーザー登録用 */
+.users-new-wrapper {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 100px;
+}
+
+/* ユーザー一覧用 */
+.users-index-wrapper {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 100px;
+}
+
+.users-index-container {
+  margin-top: 20px;
+}
+
+/* ユーザー情報用 */
+.users-show-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.users-show-container {
+  margin-top: 100px;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+/* ユーザー編集用 */
+
+
+/* ログイン用 */
+.sessions-new-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.sessions-new-container {
+  margin-top: 100px;
+}
+
+
+
+/* 顧客登録用 */
+.customers-new-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.customers-new-container {
+  margin-top: 100px;
+}
+
+/* 顧客一覧用 */
+.customers-index-wrapper {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 100px;
+}
+
+.customers-index-container {
+  margin-top: 20px;
+}
+
+/* 顧客情報用 */
+.customers-show-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.customers-show-container {
+  margin-top: 100px;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+/* 顧客編集用 */
+
+
+/* 受注登録用 */
+.products-new-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.products-new-container {
+  margin-top: 100px;
+}
+
+/* 受注一覧用 */
+.products-index-wrapper {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 100px;
+}
+
+.products-index-container {
+  margin-top: 20px;
+}
+
+/* 受注情報用 */
+.products-show-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.products-show-container {
+  margin-top: 100px;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+/* 受注編集用 */
+.products-edit-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.products-edit-container {
+  margin-top: 100px;
+}

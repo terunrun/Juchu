@@ -1,0 +1,10 @@
+<!-- validateエラーメッセージを表示　暫定　☆ -->
+<% if object.errors.any? %>
+  <div class="">
+    <ul>
+      <% object.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

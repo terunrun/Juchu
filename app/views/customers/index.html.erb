@@ -1,2 +1,13 @@
-<h1>Customers#index</h1>
-<p>Find me in app/views/customers/index.html.erb</p>
+<div class="customers-index-wrapper">
+  <div class="container">
+    <div class="row">
+      <h2 class="text-center">顧客一覧</h2>
+      <% @customers.each do |customer| %>
+        <div class="col-md-4 col-md-offset-4 customers-index-container">
+          <p>顧客名：<%= link_to "#{customer.name}", customer_path(customer.id), class: "" %></p>
+          <p>メールアドレス：<%= customer.email %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

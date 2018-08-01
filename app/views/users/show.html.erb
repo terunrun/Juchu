@@ -1,2 +1,19 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="users-show-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 users-show-container">
+        <h2 class="text-center">ユーザー情報</h2>
+        <p>ユーザー名：<%= @user.name %></p>
+        <p>メールアドレス：<%= @user.email %></p>
+        <ul>
+          <li><%= link_to "ユーザー一覧", users_path, class: "" %></li>
+          <li><%= link_to "ユーザー情報編集", edit_user_path, class: "" %></li>
+          <% if @user.admin == true && @user.id != session[:user_id] %>
+            <li><%= link_to "ユーザー削除", user_path, method: :delete, class: "",
+                                    data: {confirm: "本当に削除しますか？"} %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
