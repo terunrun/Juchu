@@ -174,3 +174,53 @@
 .products-edit-container {
   margin-top: 100px;
 }
+
+/* 受注登録用 */
+.items-new-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.items-new-container {
+  margin-top: 100px;
+}
+
+/* 受注一覧用 */
+.items-index-wrapper {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 100px;
+}
+
+.items-index-container {
+  margin-top: 20px;
+}
+
+/* 受注情報用 */
+.items-show-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.items-show-container {
+  margin-top: 100px;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+/* 受注編集用 */
+.items-edit-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.items-edit-container {
+  margin-top: 100px;
+}

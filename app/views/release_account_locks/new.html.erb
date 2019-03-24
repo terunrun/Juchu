@@ -1,0 +1,16 @@
+<div class="customers-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 customers-new-container">
+        <p class="text-center">メールアドレスを入力してください</p>
+        <%= form_for :customer, url: release_account_locks_path do |f| %>
+          <div class="form-group">
+            <%= f.label :メールアドレス, class: "" %>
+            <%= f.text_field :email, class: "form-control" %>
+          </div>
+          <%= f.submit "アカウントロック解除メール送信", class: "" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

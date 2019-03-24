@@ -1,0 +1,214 @@
+/* unit17 新規作成 */
+
+h1, h2 {
+  font-weight: 100;
+}
+
+.top-hero-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-image: url("bg-top.png");
+  background-position: center;
+  /* unit17 画像の繰り返しをしないように指定 */
+  background-repeat: none;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #464646;
+}
+
+.top-hero-container {
+  padding-top: 220px;
+  h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-bottom: 60px;
+  }
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.btn-white {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  /* unit17 以下によって背景色を透明にしている */
+  background-color: rgba(0, 0, 0, 0);
+
+  /* マウスを乗せたときの設定 */
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+
+/* unit18 新規作成 */
+.form-control {
+  height: 45px;
+}
+
+.users-new-wrapper {
+  /* unit18 viewport widthを指定 */
+  width: 100vw;
+  /* unit18 viewport heightを指定 */
+  height: 100vh;
+  background-image: url('bg-top.png');
+  /* unit18 背景画像の位置：中央 */
+  background-position: center center;
+  /* unit18 背景画像の繰り返し：なし */
+  background-repeat: no-repeat;
+  /* unit18 背景画像の固定：固定 */
+  background-attachment: fixed;
+  /* unit18 背景画像のサイズ：画面全体 */
+  background-size: cover;
+  background-color: #464646;
+
+  .users-new-container {
+    padding-top: 120px;
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+  }
+
+}
+
+/* unit20 Navigationバー用css追加 */
+.navbar-transparent {
+  margin-bottom: 0px;
+  background-color: rgba(0,0,0,0.5);
+
+  a {
+    /* unit20 */
+    color: #fffff !important;
+  }
+
+  .navbar-brand {
+    padding: 0px;
+    margin-top: 15px;
+  }
+
+  img {
+    height: 40px;
+  }
+
+}
+
+/* unit21 topic登録画面用css追加 */
+.topics-new-wrapper {
+  margin-top: 120px;
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+}
+
+.btn-black {
+  color: #565656;
+  border: 1px solid #565656;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  /* unit17 以下によって背景色を透明にしている */
+  background-color: rgba(0, 0, 0, 0.0);
+
+  /* マウスを乗せたときの設定 */
+  &:hover {
+    color: #565656;
+  }
+}
+
+/* unit21 topic一覧画面用css追加 */
+.topic-index-wrapper {
+  padding-top: 70px;
+  background-color: #fafafa;
+
+  .topic-index-single {
+    background-color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+
+    .topic-author {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .topic-index-icon {
+      width:35px;
+      height: 30px;
+      margin-left: 20px;
+    }
+
+    .topic-text {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .topic-comment {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    img {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+  }
+
+}
+
+/* unit22 確認テスト コメント投稿画面用cssを追加 */
+.comment-new-wrapprer {
+  margin-top: 100px;
+
+  .topic-index-single {
+    background-color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+  }
+
+  img {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+
+/* unit27 ユーザー情報画面用css追加 */
+.user-show-wrapper {
+  margin-top: 100px;
+}
+
+/* 残 footer用css追加 */
+.footer-area {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100wv;
+  background-color: rgba(0,0,0,0.5);
+
+  li {
+    margin-right: 10px;
+    float: right;
+    list-style-type: none;
+  }
+}
+
+.contact-container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}

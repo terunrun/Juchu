@@ -5,15 +5,15 @@
         <h2 class="text-center">ログイン</h2>
         <%= form_for :session, url: login_path do |f| %>
           <div class="form-group">
-            <%= f.label :email, class: "" %>
+            <%= f.label :メールアドレス, class: "" %>
             <%= f.text_field :email, class: "form-control" %>
           </div>
           <div class="form-group">
-            <%= f.label :password, class: "" %>
+            <%= f.label :パスワード, class: "" %>
             <%= f.password_field :password, class: "form-control" %>
           </div>
           <div class="form-group">
-            <%= f.label :authorization_code, class: "" %>
+            <%= f.label :認証コード, class: "" %>
             <%= f.text_field :authorization_code, class: "form-control" %>
           </div>
           <%= f.submit "ログイン", class: "btn btn-block active" %>

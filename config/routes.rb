@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   resources :users
   resources :customers
   resources :products
+  resources :items
+  resources :account_activations, only: :edit
+  resources :release_account_locks, only: [:new, :create, :edit]
 
   # session関連ルーティング
   get '/login', to: 'sessions#new'

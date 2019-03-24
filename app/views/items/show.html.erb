@@ -1,0 +1,19 @@
+<div class="items-show-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 items-show-container">
+        <h2 class="text-center">商品詳細</h2>
+        <%= image_tag @item.picture.url if @item.picture? %>
+        <p>商品名：<%= @item.name %></p>
+        <p>説明　：<%= @item.description %></p>
+        <p>登録日：<%= @item.created_at %></p>
+        <ul>
+          <li><%= link_to "商品一覧", items_path, class: "" %></li>
+          <li><%= link_to "商品詳細編集", edit_item_path, class: "" %></li>
+          <li><%= link_to "商品削除", item_path, method: :delete, class: "",
+                                      data: {confirm: "本当に削除しますか？"} %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

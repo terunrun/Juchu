@@ -16,7 +16,8 @@
           </div>
         <% end %>
         <div class="col-md-6 col-md-offset-3 text-center">
-        <%= link_to "CSV形式でダウンロード", products_path(format: :csv), class: "" %>
+          <%= link_to "CSV形式でダウンロード", products_path(format: :csv), class: "" %>
+        </div>
       <% else %>
         <p class="text-center">受注していません。</p>
       <% end %>

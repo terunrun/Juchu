@@ -1,0 +1,28 @@
+<div class="items-index-wrapper">
+  <div class="container">
+    <div class="row">
+      <%= form_tag(items_path, method: :get) do %>
+        <%= text_field_tag :search_name %>
+        <%= date_field_tag :search_date %>
+        <%= submit_tag "商品検索", :name => nil %>
+      <% end %>
+      <h2 class="text-center">商品一覧</h2>
+      <% if !@items.blank? %>
+        <% @items.each do |item| %>
+          <div class="col-md-6 col-md-offset-3 items-index-container">
+            <%= image_tag item.picture.url if item.picture? %>
+            <% if logged_in? %>
+              <p>商品名：<%= link_to "#{item.name}", item_path(item.id), class:"" %>
+              <p>登録日：<p class=""><%= l(item.created_at, format: :nengappi) %></p>
+            <% elsif logged_in_customer? %>
+              <p>商品名：<%= link_to "#{item.name}", new_product_path(item.id), class:"" %>
+            <% end %>
+          </div>
+        <% end %>
+      <% else %>
+        <p class="text-center">商品がありません</p>
+      <% end %>
+    </div>
+    </div>
+  </div>
+</div>

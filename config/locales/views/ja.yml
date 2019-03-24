@@ -1,0 +1,5 @@
+ja:
+  session:
+    new:
+      email: メールアドレス
+      password: パスワード

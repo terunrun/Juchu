@@ -14,7 +14,8 @@ class CustomersController < ApplicationController
   def create
     @customer = Customer.new( customer_params )
     if @customer.save
-      redirect_to login_path, success: "発注者ユーザーを登録しました"
+      CustomerMailer.accont_activation(@customer).deliver_now
+      redirect_to root_path, success: "登録されたメールアドレスにアクティベート用メールを送信しました"
     else
       flash.now[:danger] = "発注者ユーザーの登録に失敗しました"
       render "new"

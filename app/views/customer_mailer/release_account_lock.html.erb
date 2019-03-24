@@ -1,0 +1,4 @@
+<p>
+  Please click link below for unlocking your account.
+  <%= link_to "Unlock", edit_release_account_lock_url(@customer.release_account_lock_token, email: @customer.email) %>
+</p>

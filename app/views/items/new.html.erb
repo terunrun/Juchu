@@ -1,0 +1,33 @@
+<div class="items-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 items-new-container">
+        <h2 class="text-center">商品登録</h2>
+        <%= form_for @item do |f| %>
+          <!-- validateエラーメッセージを表示　暫定　☆ -->
+          <% if f.object.errors.any? %>
+            <div class="">
+              <ul>
+                <% f.object.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <div class="form-group">
+            <%= f.label :name, class: "" %>
+            <%= f.text_field :name, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :description, class: "" %>
+            <%= f.text_field :description, class: "form-control" %>
+          </div>
+          <%= f.submit "商品登録", class: "btn btn-block active" %>
+          <span class="picture">
+            <%= f.file_field :picture %>
+          </span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

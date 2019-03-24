@@ -26,6 +26,7 @@
             <% if logged_in? %>
               <li><%= link_to "顧客一覧", customers_path, class:"" %></li>
               <li><%= link_to "発注一覧", products_path, class:"" %></li>
+              <li><%= link_to "商品登録", new_item_path, class: "" %></li>
               <li><%= link_to "ユーザー一覧", users_path, class:"" %></li>
               <li><%= link_to "ユーザー情報", user_path(current_user.id), class:"" %></li>
               <li><%= link_to "ログアウト", logout_path, method: :delete, class:"" %></li>

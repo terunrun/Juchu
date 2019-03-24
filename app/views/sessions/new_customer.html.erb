@@ -5,16 +5,21 @@
         <h2 class="text-center">発注者ログイン</h2>
         <%= form_for :session, url: login_customer_path do |f| %>
           <div class="form-group">
-            <%= f.label :email, class: "" %>
+            <%= f.label :メールアドレス, class: "" %>
             <%= f.text_field :email, class: "form-control" %>
           </div>
           <div class="form-group">
-            <%= f.label :password, class: "" %>
+            <%= f.label :パスワード, class: "" %>
             <%= f.password_field :password, class: "form-control" %>
           </div>
+          <%= f.label :remember_me, class: "checkbox inline" do %>
+            <%= f.check_box :remember_me %>
+            <span>次回から自動でログイン</span>
+          <% end %>
           <%= f.submit "ログイン", class: "btn btn-block active" %>
         <% end %>
         <%= link_to "発注者登録はこちら", new_customer_path %>
+        <%= link_to "アカウントロックの解除はこちら", new_release_account_lock_path %>
       </div>
     </div>
   </div>
